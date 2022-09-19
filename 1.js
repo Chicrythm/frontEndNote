@@ -1,7 +1,3 @@
-let a = 1
-let b = 2
-
-a = b;
-b = a
-console.log(a)
-console.log(b)
+const str = 'abcabc'
+let rule = /abc/u
+console.log(str.search(rule))

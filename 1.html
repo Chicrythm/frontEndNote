@@ -6,37 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .box:before{
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 10px solid red;
-      border-top: 10px solid blue;
-      border-bottom: 10px solid gray;
+    [class~='val'] {
+      background-color: blue;
     }
   </style>
 </head>
 <body>
-  <form action="some action">
-    <button> some text n</button>
-  </form>
-
-  <div id="1">some texxt</div>
-
-  <div class="box"></div>
-  
+  <div class="value">123</div>
+  <div class="">123</div>
+  <div class="  val  ">123</div>
+  <div class="val box">123</div>
   <script>
-      for(let i = 0; i<2; i++) {
-      setTimeout(function(){
-        console.log(i)
-      },100)
-    }
+     let a = {}
+     console.log(a)
+     //  普通对象没有显式原型对象
+     console.log('prototype', a.prototype)
 
-    for(var i = 0; i<2; i++) {
-      setTimeout(function(){
-        console.log(i)
-      },100)
-    }
+     function b(name) {
+      this.name = name
+     }
+
+     let c = new b('ziqing')
+     console.log(c)
+     console.log(c.__proto__ === b.prototype)
+
   </script>
 </body>
 </html>
