@@ -111,7 +111,7 @@ base64 使用传输 8 位字节码的编码方式，将代表图像的编码直�
 视频懒加载：使用 poster 指定图片作为视频延迟加载出现前的占位
 
 ### 预加载
-preload 属性会强制浏览器进行预加载
+preload 属性会强制浏览器进行预加载，不会阻塞 HTML 渲染和 document 的 onload 事件
 preconnect 预连接，告知浏览器当前页面将与站点建立连接
 dns-prefetch dns预解析
 prefetch 让非关键操作能够更早发生
